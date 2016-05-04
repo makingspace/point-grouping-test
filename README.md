@@ -14,7 +14,32 @@ You can submit it as a Github repository or compressed file.
 
 ### The main goal: grouping
 
-`points.json` is a JSON data file that contains a list of objects representing geographic points, with a `lat`, `lon` and `id`. Your job is to write a Python script that will take an integer argument *n*, then read the file and output the `id`s of all the points, grouped into *n* groups, into a second file, `groups.json`.
+`points.json` is a JSON data file that contains a list of objects representing geographic points, with a `lat`, `lon` and `id`. Your job is to write a Python script that will take an integer argument *n*, then read the file and output the `id`s of all the points, grouped into *n* groups, into a second file, `groups.json`. That file should be formated as a list of lists with similar dictionnaries to the `points.json` file.
+
+```json
+[
+  [
+   {
+      "lat":4.230509857737786,
+      "lon":-58.83513917625535,
+      "id":"c24e8984-abd3-4e2a-ac5e-0dead05725f8"
+   },
+   {
+      "lat":-15.056322793924458,
+      "lon":-52.76070496476228,
+      "id":"5403d956-b94b-4e9a-ad19-01b7f1eb9e56"
+   }
+  ],
+  [
+   {
+      "lat":-56.31197261613533,
+      "lon":24.017742442610725,
+      "id":"4c399c25-f123-4779-851d-d0596159b898"
+   }
+  ]
+]
+```
+
 
 Given that the data set represents geographic data, you should try to group points by proximity, so that the geographically closest points are grouped together. You should end up with a clean partitioning of the overall space.
 
